@@ -25,8 +25,8 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iB9-PD-qnB">
-                                <rect key="frame" x="159.5" y="122" width="56" height="30"/>
-                                <state key="normal" title="영상 선택"/>
+                                <rect key="frame" x="147.5" y="122" width="80" height="30"/>
+                                <state key="normal" title="Pick Videos"/>
                                 <connections>
                                     <action selector="imageBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kUA-Bl-3Tf"/>
                                 </connections>
