@@ -11,13 +11,13 @@ import AVFoundation
 import MobileCoreServices
 import Photos
 
-protocol MediaPickerDelegate {
+protocol MediaPickerDelegate: class {
     func didFinishPickingMedia(videoURL: URL)
 }
 
 class MediaPickerManager: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    var mediaPickerDelegate: MediaPickerDelegate?
+    weak var mediaPickerDelegate: MediaPickerDelegate?
 
     lazy var imagePicker: UIImagePickerController = {
 
@@ -87,7 +87,6 @@ class MediaPickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
 
         if mediaType == kUTTypeMovie as String {
             if let videoURL = info[UIImagePickerControllerMediaURL] as? URL {
-                
                 mediaPickerDelegate?.didFinishPickingMedia(videoURL: videoURL)
             }
         }

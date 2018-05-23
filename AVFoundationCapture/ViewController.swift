@@ -35,6 +35,8 @@ class ViewController: UIViewController {
 extension ViewController: MediaPickerDelegate {
     func didFinishPickingMedia(videoURL: URL) {
         let captureTime: [Double] = [12, 2, 3, 4]
+
+        // images will be created at each capture times.
         mediaPickerManager.generateThumbnailSync(url: videoURL, startOffsets: captureTime) { images in
             self.imageView.image = images.first!
         }
